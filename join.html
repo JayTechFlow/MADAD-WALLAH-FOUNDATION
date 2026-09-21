@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us — Volunteer Registration | Madad Wallah Foundation</title>
+  <meta name="description" content="Join MADAD WALLAH FOUNDATION as a volunteer, member or donor. Register through our interactive form — your details help us match you to the right programme.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- Reusable Top Bar -->
+<site-topbar></site-topbar>
+
+<!-- Reusable Header & Navigation -->
+<site-header></site-header>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Join Us / Volunteer</h1>
+    <p>Become part of the madad family — contribute your time, skills, and empathy.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Join Us</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3" style="margin-bottom:56px;">
+      <div class="card" style="text-align:center;">
+        <div class="icon" style="margin:0 auto 18px;">🤝</div>
+        <h3>Volunteer</h3>
+        <p>Give your time and skills on the ground — educational camps, healthcare drives, relief logistics, and community outreach.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="icon" style="margin:0 auto 18px;">🏛️</div>
+        <h3>Member</h3>
+        <p>Associate with the foundation as a verified member and contribute to programme development and regional coordination.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="icon" style="margin:0 auto 18px;">💛</div>
+        <h3>Donor</h3>
+        <p>Support programmes financially — every rupee is 100% accounted, audited, and qualifies for 80G tax deductions.</p>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <span class="eyebrow">Registration Form</span>
+      <h2>Register Your Interest</h2>
+      <p>Fill in your details below. For any inquiry or direct assistance, reach our volunteer helpline at <a href="tel:+917004460314" style="font-weight:700;">+91 7004460314</a>.</p>
+    </div>
+
+    <div class="form-card" style="max-width:860px;margin:0 auto;">
+      <div class="form-success" id="vol-success" role="alert">
+        <strong>✅ Thank you!</strong> Your registration has been received successfully. Our volunteer coordination team will contact you shortly.
+      </div>
+
+      <form id="volunteer-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="f-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="f-name" name="full_name" required placeholder="e.g. Rahul Sharma" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="f-mobile">Mobile Number <span class="req">*</span></label>
+            <input type="tel" id="f-mobile" name="mobile" required placeholder="10-digit mobile number" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="f-dob">Birthdate Celebration Date <span class="req">*</span></label>
+            <input type="date" id="f-dob" name="birthdate_celebration_date" required>
+          </div>
+          <div class="form-group">
+            <label for="f-blood">Blood Group <span class="req">*</span></label>
+            <select id="f-blood" name="blood_group" required>
+              <option value="">— Select blood group —</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="Not Known">Not Known</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-idmark">Identification Mark on Body <span class="req">*</span></label>
+            <input type="text" id="f-idmark" name="identification_mark" required placeholder="e.g. Mole on right hand, scar, or None">
+          </div>
+          <div class="form-group">
+            <label for="f-father">Father's / Guardian's Name <span class="req">*</span></label>
+            <input type="text" id="f-father" name="father_name" required placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="f-anniversary">Marriage Anniversary Date (Optional)</label>
+            <input type="date" id="f-anniversary" name="marriage_anniversary">
+          </div>
+          <div class="form-group">
+            <label for="f-state">State <span class="req">*</span></label>
+            <input type="text" id="f-state" name="state" required placeholder="e.g. Bihar" autocomplete="address-level1">
+          </div>
+          <div class="form-group">
+            <label for="f-district">District <span class="req">*</span></label>
+            <input type="text" id="f-district" name="district" required placeholder="e.g. Samastipur" autocomplete="address-level2">
+          </div>
+          <div class="form-group">
+            <label for="f-edu">Educational Qualification</label>
+            <input type="text" id="f-edu" name="qualification" placeholder="e.g. Graduate, 12th Pass, Diploma">
+          </div>
+          <div class="form-group">
+            <label for="f-role">Role Applied For <span class="req">*</span></label>
+            <select id="f-role" name="role" required>
+              <option value="">— Select role —</option>
+              <option value="Volunteer">Field Volunteer</option>
+              <option value="Member">Foundation Member</option>
+              <option value="Donor">Supporter / Donor</option>
+              <option value="Coordinator">Block / Ward Coordinator</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Preferred Sectors of Interest</label>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="sector" value="Education"> 📚 Education &amp; Literacy</label>
+              <label><input type="checkbox" name="sector" value="Health"> 🏥 Health &amp; Medical Camps</label>
+              <label><input type="checkbox" name="sector" value="Environment"> 🌱 Environment &amp; Plantation</label>
+              <label><input type="checkbox" name="sector" value="Women Empowerment"> 👩‍🎓 Women Empowerment</label>
+              <label><input type="checkbox" name="sector" value="Disaster Relief"> ⛑️ Disaster Relief</label>
+            </div>
+          </div>
+          <div class="form-group full">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Volunteer Registration</button>
+            <p class="form-note">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a>. Your personal data is treated with strict confidentiality.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Reusable Footer -->
+<site-footer></site-footer>
+
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
