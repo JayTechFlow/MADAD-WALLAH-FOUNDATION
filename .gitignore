@@ -2,3 +2,5 @@ _deploy/
 _site.zip
 assets/*.py
 assets/ocr*
+.DS_Store
+.netlify/
