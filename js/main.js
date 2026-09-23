@@ -274,132 +274,7 @@
     }
   }
 
-  /* ---------- 6. Form Validation & Local Submission (Join Us Form) ---------- */
-  function initVolunteerForm() {
-    var form = document.getElementById("volunteer-form");
-    if (!form) return;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Remove any prior error highlights
-      form.querySelectorAll(".form-error").forEach(function (el) { el.remove(); });
-      form.querySelectorAll(".has-error").forEach(function (el) { el.classList.remove("has-error"); });
-
-      var isValid = true;
-      var firstInvalidInput = null;
-      var data = {};
-
-      function markError(field, message) {
-        isValid = false;
-        field.classList.add("has-error");
-        var err = document.createElement("span");
-        err.className = "form-error";
-        err.textContent = message;
-        field.parentNode.appendChild(err);
-        if (!firstInvalidInput) firstInvalidInput = field;
-      }
-
-      // Validate required inputs
-      var nameInput = form.querySelector("[name='full_name']");
-      if (nameInput && !nameInput.value.trim()) {
-        markError(nameInput, "Please enter your full name.");
-      }
-
-      var mobileInput = form.querySelector("[name='mobile']");
-      if (mobileInput) {
-        var phoneClean = mobileInput.value.replace(/[\s+-]/g, "");
-        if (!phoneClean || phoneClean.length < 10) {
-          markError(mobileInput, "Please enter a valid 10-digit mobile number.");
-        }
-      }
-
-      var emailInput = form.querySelector("[name='email']");
-      if (emailInput) {
-        var emailVal = emailInput.value.trim();
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailVal || !emailRegex.test(emailVal)) {
-          markError(emailInput, "Please enter a valid email address.");
-        }
-      }
-
-      var dobInput = form.querySelector("[name='birthdate_celebration_date']");
-      if (dobInput && !dobInput.value) {
-        markError(dobInput, "Please choose your birthdate.");
-      }
-
-      var bloodInput = form.querySelector("[name='blood_group']");
-      if (bloodInput && !bloodInput.value) {
-        markError(bloodInput, "Please select your blood group.");
-      }
-
-      var idMarkInput = form.querySelector("[name='identification_mark']");
-      if (idMarkInput && !idMarkInput.value.trim()) {
-        markError(idMarkInput, "Please provide an identification mark or write 'None'.");
-      }
-
-      var fatherInput = form.querySelector("[name='father_name']");
-      if (fatherInput && !fatherInput.value.trim()) {
-        markError(fatherInput, "Please enter father's name.");
-      }
-
-      var stateInput = form.querySelector("[name='state']");
-      if (stateInput && !stateInput.value.trim()) {
-        markError(stateInput, "Please enter your state.");
-      }
-
-      var districtInput = form.querySelector("[name='district']");
-      if (districtInput && !districtInput.value.trim()) {
-        markError(districtInput, "Please enter your district.");
-      }
-
-      var roleInput = form.querySelector("[name='role']");
-      if (roleInput && !roleInput.value) {
-        markError(roleInput, "Please select a role.");
-      }
-
-      var successMsg = document.getElementById("vol-success");
-
-      if (!isValid) {
-        if (successMsg) successMsg.classList.remove("show");
-        if (firstInvalidInput) {
-          firstInvalidInput.focus();
-          firstInvalidInput.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-        return;
-      }
-
-      // Collect data
-      form.querySelectorAll("[name]").forEach(function (f) {
-        if (f.type === "checkbox") {
-          data[f.name] = data[f.name] || [];
-          if (f.checked) data[f.name].push(f.value);
-        } else {
-          data[f.name] = f.value.trim();
-        }
-      });
-
-      // Save to localStorage for demo/offline resilience
-      try {
-        var store = JSON.parse(localStorage.getItem("mwf_volunteers") || "[]");
-        data.submitted_at = new Date().toISOString();
-        store.push(data);
-        localStorage.setItem("mwf_volunteers", JSON.stringify(store));
-      } catch (err) {
-        // Continue gracefully if storage blocked
-      }
-
-      // Show confirmation
-      if (successMsg) {
-        successMsg.classList.add("show");
-        successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
-      form.reset();
-    });
-  }
-
-  /* ---------- 7. Contact Us Page Interactive Message Form ---------- */
+  /* ---------- 6. Contact Us Page Interactive Message Form ---------- */
   function initContactForm() {
     var form = document.getElementById("contact-message-form");
     if (!form) return;
@@ -434,7 +309,6 @@
     initLightbox();
     initCopyButtons();
     initDonationChips();
-    initVolunteerForm();
     initContactForm();
   });
 })();

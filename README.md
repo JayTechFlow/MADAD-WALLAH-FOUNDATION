@@ -14,7 +14,7 @@ non-profit company (CIN: U88900BR2026NPL087297, DARPAN ID: BR/2026/1184067).
 | `objectives.html` | Our Objectives — 6 MoA domains |
 | `activities.html` | Activities / Programs |
 | `gallery.html` | Gallery — photo grid + lightbox, video slots |
-| `join.html` | Join Us / Volunteer registration form |
+| `join.html` | Join Us / Volunteer information & Google Form registration |
 | `donate.html` | Donate — bank details, UPI QR, impact |
 | `transparency.html` | Statutory Documents & Transparency |
 | `contact.html` | Contact Us — address, email, Google Map |
@@ -26,31 +26,29 @@ non-profit company (CIN: U88900BR2026NPL087297, DARPAN ID: BR/2026/1184067).
 
 ```
 ├── index.html + 11 inner pages
-├── css/style.css        # full design system (responsive, accessible)
-├── js/main.js           # nav, lightbox, counters, forms, copy buttons
-├── images/              # logo, hero, gallery, leaders, UPI QR (demo assets)
-└── assets/              # generator scripts (image + page builders)
+├── css/style.css        # modern responsive design system (tokens, components, WCAG AA)
+├── js/components.js     # reusable Web Components (<site-topbar>, <site-header>, <site-footer>)
+├── js/main.js           # interactive features: stats counters, lightbox, validation, copy utils
+├── images/              # logo, hero, gallery, leaders, UPI QR
 ```
 
-## Before going live — checklist
+## Reusable Web Components
 
-1. **Google Form (Join Us page)** — create the Google Form with the fields in
-   the requirements sheet, link it to a Google Sheet, then in `join.html`
-   uncomment the `gform-wrap` iframe block and paste your form's embed URL.
-   The on-page demo form can then be removed (it currently stores submissions
-   in the browser's localStorage as a placeholder).
-2. **Banking details (Donate page)** — replace the four `[ To be updated ]`
-   cells in `donate.html` with the real Bank Name, Account Number, IFSC and
-   Branch, and update each `data-copy` attribute to match.
-3. **UPI ID** — the QR encodes `madadwallahfoundation@upi`. Regenerate
-   `images/upi-qr.png` with the real UPI ID (edit `assets/generate_images.py`).
-4. **Contact number** — replace `[ To be updated ]` in `contact.html`.
-5. **Social media links** — replace the `#` hrefs in the top bar, contact
-   page and footer with real Facebook / Instagram / YouTube URLs.
+All pages now use modular Web Components defined in `js/components.js`:
+- `<site-topbar></site-topbar>` — Top registration bar with CIN, DARPAN, 80G badges, phone helpline, email, and social media buttons.
+- `<site-header></site-header>` — Sticky brand header with automatic active page highlighting and full-height mobile slide drawer with backdrop blur.
+- `<site-footer></site-footer>` — Comprehensive 4-column footer with organization overview, quick links, get involved links, registered address, follow & connect social icons, and copyright.
+
+Centralizing these components eliminates over 1,000 lines of duplicated code across the 12 HTML pages. Updating contact numbers, links, or social media handles in `js/components.js` automatically applies to every page.
+
+## Official Social Media Channels
+
+- **LinkedIn:** https://www.linkedin.com/in/madad-wallah-foundation-58b4a3435/
+- **Instagram:** https://www.instagram.com/madadwallah
+- **Facebook:** https://www.facebook.com/friendsofom
 6. **Tagline** — the Hindi tagline "हर हाथ में मदद क़ा साथ" is a placeholder;
    swap it in `index.html` hero if the foundation has an official one.
-7. **Gallery photos/videos** — replace demo images with real event photos and
-   embed YouTube iframes in `gallery.html` when the channel is live.
+7. **Gallery photos/videos** — replace demo images with real event photos and video media in `gallery.html`.
 8. **News items** — update the three news cards in `index.html` as events happen.
 
 ## Deploy (free options)
