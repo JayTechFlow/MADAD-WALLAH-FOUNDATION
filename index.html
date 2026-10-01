@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMPORTANT NOTICE — MADAD WALLAH FOUNDATION</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>WEBSITE ACCESS SUSPENDED — MADAD WALLAH FOUNDATION</title>
+  <meta name="description" content="Official Notice of Temporary Service Suspension for MADAD WALLAH FOUNDATION due to outstanding payment. Immediate attention required.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%23dc2626'/><text x='12' y='16' text-anchor='middle' fill='white' font-size='12' font-family='sans-serif' font-weight='bold'>!</text></svg>">
   <style>
     /* ============================================================
-       MADAD WALLAH FOUNDATION — Temporary Payment Pending Notice
-       Palette: Neutral Dark Navy, Crisp White, Muted Gold
-       Accessibility: High contrast, WCAG AA compliant, self-contained
+       MADAD WALLAH FOUNDATION — STANDALONE PAYMENT SUSPENSION NOTICE
+       Theme: Deep Charcoal, Strong Red Accents, Crisp White Typography
+       Zero External Dependencies · 100% Self-Contained
        ============================================================ */
 
     :root {
-      --color-bg-page: #0a1628;
-      --color-card-bg: #ffffff;
-      --color-navy-dark: #0f1d33;
-      --color-navy-body: #1e293b;
-      --color-navy-muted: #475569;
-      --color-navy-subtle: #f1f5f9;
-      --color-navy-border: #cbd5e1;
-      --color-gold: #9a7830;
-      --color-gold-light: #bfa15f;
-      --color-gold-bg: #fdfaf3;
-      --color-gold-border: #e8dcc4;
-      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --bg-canvas: #090a0f;
+      --bg-card: #12141c;
+      --bg-section: #171a25;
+      --bg-critical: rgba(220, 38, 38, 0.08);
+      --border-card: rgba(220, 38, 38, 0.28);
+      --border-section: rgba(255, 255, 255, 0.08);
+      --border-critical: rgba(220, 38, 38, 0.45);
+      --text-white: #ffffff;
+      --text-heading: #f8fafc;
+      --text-body: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --red-primary: #dc2626;
+      --red-light: #ef4444;
+      --red-bright: #f87171;
+      --red-dark: #991b1b;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
     *, *::before, *::after {
@@ -34,268 +40,382 @@
       padding: 0;
     }
 
+    html, body {
+      min-height: 100%;
+    }
+
     body {
-      min-height: 100vh;
+      background-color: var(--bg-canvas);
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(220, 38, 38, 0.14) 0%, rgba(9, 10, 15, 0.95) 75%),
+        radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.4) 0%, transparent 60%);
+      font-family: var(--font-stack);
+      color: var(--text-body);
+      line-height: 1.65;
+      padding: 36px 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--color-bg-page);
-      background-image: 
-        radial-gradient(ellipse at 50% 0%, #162a4d 0%, var(--color-bg-page) 75%);
-      font-family: var(--font-family);
-      color: var(--color-navy-body);
-      line-height: 1.65;
-      padding: 24px 16px;
     }
 
-    .notice-wrapper {
+    .container {
       width: 100%;
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
-    .notice-card {
-      background-color: var(--color-card-bg);
-      border-radius: 12px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.15);
-      border-top: 5px solid var(--color-gold-light);
-      padding: 40px 44px;
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-top: 4px solid var(--red-primary);
+      border-radius: 14px;
+      box-shadow: 
+        0 0 60px rgba(220, 38, 38, 0.08),
+        0 30px 60px -15px rgba(0, 0, 0, 0.85);
+      padding: 44px 48px;
       position: relative;
     }
 
-    /* Organization Branding */
-    .brand-header {
+    /* Warning Icon & Status */
+    .header {
       text-align: center;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #e2e8f0;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
-    .brand-logo {
-      width: 64px;
-      height: 64px;
-      object-fit: contain;
-      margin-bottom: 12px;
-      display: inline-block;
+    .icon-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.35);
+      margin-bottom: 20px;
+      box-shadow: 0 0 24px rgba(220, 38, 38, 0.2);
     }
 
-    .brand-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--color-navy-dark);
-      text-transform: uppercase;
+    .icon-wrapper svg {
+      width: 44px;
+      height: 44px;
+      fill: none;
+      stroke: var(--red-light);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .brand-meta {
-      font-size: 0.8125rem;
-      color: var(--color-navy-muted);
-      margin-top: 4px;
-      line-height: 1.4;
-    }
-
-    /* Notice Header */
-    .notice-status-badge {
+    .status-badge {
       display: inline-block;
       font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-gold);
-      background-color: var(--color-gold-bg);
-      border: 1px solid var(--color-gold-border);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
-    }
-
-    .notice-heading-group {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .notice-heading {
-      font-size: 1.75rem;
       font-weight: 800;
-      letter-spacing: 0.02em;
-      color: var(--color-navy-dark);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      line-height: 1.25;
-      margin-bottom: 8px;
+      color: var(--red-bright);
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.4);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
     }
 
-    .notice-subheading {
+    .main-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--text-white);
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .secondary-title {
       font-size: 1.0625rem;
-      font-weight: 600;
-      color: var(--color-gold);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--red-light);
+      text-transform: uppercase;
       line-height: 1.4;
     }
 
-    /* Main Message */
-    .notice-main-message {
-      margin-bottom: 24px;
-      font-size: 0.96875rem;
-      color: var(--color-navy-body);
+    .entity-tag {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      letter-spacing: 0.02em;
     }
 
-    .notice-main-message p {
-      margin-bottom: 14px;
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.4), transparent);
+      margin: 28px 0 32px;
     }
 
-    .notice-main-message p:last-child {
-      margin-bottom: 0;
-    }
-
-    .salutation {
-      font-weight: 700;
-      color: var(--color-navy-dark);
-    }
-
-    /* Callout Sections */
-    .notice-section {
-      border-radius: 8px;
-      padding: 18px 20px;
-      margin-bottom: 20px;
-      font-size: 0.9375rem;
+    /* Content Sections */
+    .section {
+      background: var(--bg-section);
+      border: 1px solid var(--border-section);
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-bottom: 22px;
     }
 
     .section-title {
-      font-size: 0.875rem;
-      font-weight: 700;
+      font-size: 0.9375rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 8px;
-      line-height: 1.3;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    /* Restoration Notice */
-    .notice-restoration {
-      background-color: var(--color-gold-bg);
-      border: 1px solid var(--color-gold-border);
-      border-left: 4px solid var(--color-gold-light);
+    .section-title svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--red-light);
+      stroke-width: 2.2;
+      fill: none;
+      flex-shrink: 0;
     }
 
-    .notice-restoration .section-title {
-      color: var(--color-gold);
+    .section p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      margin-bottom: 14px;
     }
 
-    .notice-restoration p {
-      color: #3d3420;
-      margin-bottom: 8px;
-    }
-
-    .notice-restoration p:last-child {
+    .section p:last-child {
       margin-bottom: 0;
     }
 
-    /* Contact Information */
-    .notice-contact {
-      background-color: var(--color-navy-subtle);
-      border: 1px solid var(--color-navy-border);
-      border-left: 4px solid var(--color-navy-dark);
+    /* Official Notice Section */
+    .section-official {
+      border-left: 4px solid var(--red-primary);
     }
 
-    .notice-contact .section-title {
-      color: var(--color-navy-dark);
+    /* Important Conditions List */
+    .section-conditions {
+      border-left: 4px solid var(--red-light);
     }
 
-    .contact-entity {
-      font-weight: 700;
-      color: var(--color-navy-dark);
-      margin-bottom: 6px;
+    .conditions-list {
+      list-style: none;
+      counter-reset: condition-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
     }
 
-    .notice-contact p {
-      color: var(--color-navy-body);
+    .conditions-list li {
+      counter-increment: condition-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.9375rem;
+      color: var(--text-body);
+      line-height: 1.55;
     }
 
-    /* Notice Footer */
-    .notice-footer {
-      margin-top: 28px;
-      padding-top: 20px;
-      border-top: 1px solid #e2e8f0;
+    .conditions-list li::before {
+      content: counter(condition-counter);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(220, 38, 38, 0.16);
+      border: 1px solid rgba(220, 38, 38, 0.45);
+      color: var(--red-bright);
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Final Warning Section */
+    .section-final {
+      background: var(--bg-critical);
+      border: 1px solid var(--border-critical);
+      border-left: 4px solid var(--red-primary);
+    }
+
+    .section-final .section-title {
+      color: var(--red-bright);
+    }
+
+    .section-final p {
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       text-align: center;
-      font-size: 0.84375rem;
-      color: var(--color-navy-muted);
-      line-height: 1.5;
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 600px) {
+    .footer-org {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .footer-subtitle {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+
+    .footer-note {
+      font-size: 0.78125rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* Responsive Adaptation */
+    @media (max-width: 640px) {
       body {
-        padding: 16px 12px;
+        padding: 20px 12px;
       }
 
-      .notice-card {
-        padding: 28px 20px;
-        border-radius: 10px;
+      .card {
+        padding: 30px 22px;
+        border-radius: 12px;
       }
 
-      .brand-name {
-        font-size: 1.125rem;
+      .icon-wrapper {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 16px;
       }
 
-      .brand-meta {
-        font-size: 0.75rem;
+      .icon-wrapper svg {
+        width: 36px;
+        height: 36px;
       }
 
-      .notice-heading {
-        font-size: 1.375rem;
+      .main-title {
+        font-size: 1.5rem;
       }
 
-      .notice-subheading {
+      .secondary-title {
         font-size: 0.9375rem;
       }
 
-      .notice-section {
-        padding: 14px 16px;
+      .entity-tag {
+        font-size: 0.75rem;
+      }
+
+      .section {
+        padding: 18px 18px;
+      }
+
+      .conditions-list li {
+        font-size: 0.875rem;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .main-title {
+        font-size: 1.3rem;
+      }
+
+      .secondary-title {
+        font-size: 0.84rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="notice-wrapper">
-    <main class="notice-card" role="main">
+  <div class="container">
+    <main class="card" role="main">
 
-      <!-- Organization Branding -->
-      <header class="brand-header">
-        <img src="images/logo.png" alt="MADAD WALLAH FOUNDATION" class="brand-logo" width="64" height="64">
-        <div class="brand-name">MADAD WALLAH FOUNDATION</div>
-        <div class="brand-meta">CIN: U88900BR2026NPL087297 &bull; DARPAN ID: BR/2026/1184067</div>
+      <!-- Header with Strict Warning Icon -->
+      <header class="header">
+        <div class="icon-wrapper" aria-hidden="true">
+          <!-- Octagon Warning Shield Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M7.86 2h8.28L22 7.86v8.28L16.14 22H7.86L2 16.14V7.86L7.86 2z"></path>
+            <line x1="12" y1="8" x2="12" y2="13"></line>
+            <circle cx="12" cy="17" r="1" fill="currentColor"></circle>
+          </svg>
+        </div>
+
+        <div>
+          <span class="status-badge">Official Suspension Notice</span>
+        </div>
+
+        <h1 class="main-title">WEBSITE ACCESS SUSPENDED</h1>
+        <h2 class="secondary-title">OUTSTANDING PAYMENT &mdash; IMMEDIATE ATTENTION REQUIRED</h2>
+        <div class="entity-tag">MADAD WALLAH FOUNDATION &bull; CIN: U88900BR2026NPL087297 &bull; DARPAN ID: BR/2026/1184067</div>
       </header>
 
-      <!-- Notice Headings -->
-      <div class="notice-heading-group">
-        <span class="notice-status-badge">Service Suspension</span>
-        <h1 class="notice-heading">IMPORTANT NOTICE</h1>
-        <p class="notice-subheading">Website Services Temporarily Suspended</p>
-      </div>
+      <div class="divider" aria-hidden="true"></div>
 
-      <!-- Main Message -->
-      <div class="notice-main-message">
-        <p class="salutation">Dear Visitor,</p>
-        <p>We regret to inform you that the website services of MADAD WALLAH FOUNDATION have been temporarily suspended due to an outstanding payment that remains unsettled.</p>
-        <p>Despite the completion of the agreed website development work, the pending payment has not yet been received. Consequently, access to the regular website has been temporarily restricted.</p>
-      </div>
-
-      <!-- Restoration Notice -->
-      <section class="notice-section notice-restoration" aria-labelledby="restoration-heading">
-        <h2 id="restoration-heading" class="section-title">Restoration Notice</h2>
-        <p>Full website access will be restored promptly upon receipt and confirmation of the outstanding payment.</p>
-        <p>We appreciate your understanding and cooperation while this matter is being resolved.</p>
+      <!-- Official Notice Section -->
+      <section class="section section-official" aria-labelledby="official-notice-heading">
+        <h3 id="official-notice-heading" class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+          NOTICE OF TEMPORARY SERVICE SUSPENSION
+        </h3>
+        <p>This website has been temporarily suspended due to the non-receipt of outstanding payment for completed website development services.</p>
+        <p>Despite the completion of the agreed work, the payment remains unsettled. Accordingly, access to the website and its associated services has been restricted pending settlement of the outstanding dues.</p>
+        <p>This suspension shall remain in effect until payment has been received and its clearance has been confirmed.</p>
       </section>
 
-      <!-- Contact Information -->
-      <section class="notice-section notice-contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="section-title">Contact Information</h2>
-        <p class="contact-entity">Website Development &amp; Technical Support</p>
-        <p>For payment-related clarification or resolution, please contact the website development team through the previously agreed communication channel.</p>
+      <!-- Important Conditions Section -->
+      <section class="section section-conditions" aria-labelledby="conditions-heading">
+        <h3 id="conditions-heading" class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          IMPORTANT CONDITIONS
+        </h3>
+        <ol class="conditions-list">
+          <li>Website access will remain restricted until the outstanding payment is cleared.</li>
+          <li>Further development, maintenance, technical support, and deployment services are suspended during this period.</li>
+          <li>Restoration of website operations is subject to confirmation of full payment.</li>
+          <li>Any further action, if required, will be handled in accordance with the agreed contractual terms and applicable obligations.</li>
+        </ol>
+      </section>
+
+      <!-- Final Warning Section -->
+      <section class="section section-final" aria-labelledby="final-warning-heading">
+        <h3 id="final-warning-heading" class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          FINAL PAYMENT NOTICE
+        </h3>
+        <p>Immediate settlement of the outstanding payment is required to restore website operations. Until payment confirmation, the suspension will remain in effect.</p>
       </section>
 
       <!-- Footer -->
-      <footer class="notice-footer">
-        <p>This is a temporary notice. Normal website services will resume following payment settlement.</p>
+      <footer class="footer">
+        <div class="footer-org">MADAD WALLAH FOUNDATION</div>
+        <div class="footer-subtitle">Official Service Suspension Notice</div>
+        <p class="footer-note">This notice is issued to formally communicate the temporary suspension of services due to pending payment.</p>
       </footer>
 
     </main>
