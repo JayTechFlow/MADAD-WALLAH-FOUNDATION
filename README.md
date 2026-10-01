@@ -3,7 +3,6 @@
 Production-ready static website for **MADAD WALLAH FOUNDATION**, a Section 8
 non-profit company (CIN: U88900BR2026NPL087297, DARPAN ID: BR/2026/1184067).
 
-**Live:** https://madad-wallah-foundation-ngo.netlify.app
 
 ## Pages
 
