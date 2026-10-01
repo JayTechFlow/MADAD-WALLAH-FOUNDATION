@@ -1,0 +1,6 @@
+# MADAD WALLAH FOUNDATION — Temporary Redirection Rules
+# Preserve static asset access for notice page
+/images/*    /images/:splat    200
+
+# Force all other pages and routes to the temporary payment pending notice
+/*           /index.html       302!
